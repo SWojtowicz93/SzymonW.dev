@@ -1,0 +1,28 @@
+@media(min-width: 768px){
+    .header{
+        &__heading{
+            // font-family: serif;
+            // font-weight: normal;
+            margin-bottom: 0.1em;
+            font-size: 4.8rem;
+            color: $pure-white;
+        }
+
+        &__text{
+            font-size: 1.8rem;
+            margin-bottom: 3em;
+        }
+        &__second-text{
+            font-size: 1.4rem;
+        }
+        &__bg-icon--one{
+            top: -11em;
+            left: -11em;
+        }
+        
+        &__bg-icon--two{
+            top: -4em;
+            right: -4em;
+        }
+    }
+}
