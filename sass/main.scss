@@ -18,6 +18,7 @@ body{
     // font-family: ;
     font-size: 1.6rem;
     background-color: $dark;
+    color: #fff;
 }
 
 //Header
@@ -107,6 +108,29 @@ body{
             height: 100%;
             width: 100%;
         }
+        
+    }
+    &__slide-img-twoo{
+        position: absolute;
+        bottom: 5em;
+        left: 5em;
+        width: 50%;
+        height: 60%;
+        border-radius: 15px;
+        box-shadow: 3px 3px 10px rgba($color: $main-color, $alpha: 0.8);
+        overflow: hidden;
+        z-index: -1;
+        transform: translate(50%, 20%);
+        
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        
+    }
+    &__slide-imgs{
+        width: 100%;
+        height: 100%;
     }
     
     &__bg-icon--two{
@@ -189,6 +213,51 @@ body{
     }
 }
 
+// Main About
+.about{
+    &__box{
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        margin: 2em 0;
+        justify-content: center;
+        
+        &__in{
+            margin: 1em;
+            padding: 1em;
+            overflow: hidden; 
+            border: 1px solid $border-secondary;
+            border-radius: 20px;
+            box-shadow: 3px 3px 10px rgba($color: $secondary-color, $alpha: 0.8);
+            width: 33%;
+            background-color: $light-dark;
+            &--middle{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &--title{
+                font-size: 2.8em;
+            }
+            &--background{
+                display: flex;
+                
+                position: relative;
+                justify-content: center;
+                width: 50%;
+                height: 50%;
+                border-radius: 50%;
+                background-image: linear-gradient(60deg, #3b2187,#3b2187,#3b2187,#381056,rgb(84, 76, 26), rgb(124, 123, 123),#381056,#3b2187,#3b2187,#3b2187);
+                background-size: 600%;
+                animation: colors 6s infinite;
+                overflow: hidden;
+                &--photo{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
 
 @import './small';
 @import './medium';
