@@ -46,6 +46,26 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes pulse2 {
+  from {
+    transform: scale(1, 1);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1.1, 1.8);
+    opacity: 0;
+  }
+}
+@keyframes pulse2 {
+  from {
+    transform: scale(1, 1);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1.1, 1.8);
+    opacity: 0;
+  }
+}
 @-webkit-keyframes rotate-right {
   from {
     transform: rotate(0);
@@ -288,7 +308,6 @@ body {
 }
 
 .about__box {
-  height: 70vh;
   width: 100%;
   display: flex;
   margin: 2em 0;
@@ -303,6 +322,10 @@ body {
   box-shadow: 3px 3px 10px rgba(42, 23, 105, 0.8);
   width: 33%;
   background-color: #0f0921;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .about__box__in--middle {
   display: flex;
@@ -310,14 +333,29 @@ body {
   align-items: center;
 }
 .about__box__in--title {
-  font-size: 2.8em;
+  font-size: 1.8em;
+}
+.about__box__in--text {
+  margin: 1rem 0;
+  padding: 5px;
+  width: 80%;
+  text-align: center;
+  background-color: #190e3e;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(8, 4, 20, 0.8);
+}
+.about__box__in--text h2 {
+  font-size: 1.4em;
+}
+.about__box__in--text p {
+  font-size: 0.6em;
 }
 .about__box__in--background {
   display: flex;
   position: relative;
   justify-content: center;
-  width: 50%;
-  height: 50%;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-image: linear-gradient(60deg, #3b2187, #3b2187, #3b2187, #381056, rgb(84, 76, 26), rgb(124, 123, 123), #381056, #3b2187, #3b2187, #3b2187);
   background-size: 600%;
@@ -327,6 +365,51 @@ body {
 }
 .about__box__in--background--photo {
   width: 100%;
+}
+
+.more-about {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.more-about--button {
+  position: relative;
+  padding: 5px;
+  width: 60%;
+  text-align: center;
+  background-color: #190e3e;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(8, 4, 20, 0.8);
+  transition: color 0.3s;
+}
+.more-about--button p {
+  font-size: 0.8em;
+}
+.more-about--button:hover {
+  color: #2a1769;
+  cursor: pointer;
+}
+.more-about--button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 2px solid #2a1769;
+  border-radius: 20px;
+  opacity: 0;
+  -webkit-animation: pulse2 4s infinite;
+          animation: pulse2 4s infinite;
+}
+
+.small {
+  font-size: 0.4em;
 }
 
 @media (min-width: 576px) {
