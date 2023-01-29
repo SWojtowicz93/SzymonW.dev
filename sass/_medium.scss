@@ -31,4 +31,16 @@
     .section-padding{
         padding: 8em 2em;
     }
+
+    .projects{
+        &__cards{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &__card{
+            margin: 1em;
+            width: 45%;
+        }
+    }
 }

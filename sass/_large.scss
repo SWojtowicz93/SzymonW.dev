@@ -68,5 +68,10 @@
     .section-padding{
         padding: 10em 2em;
     }
+    .projects{
+        &__card{
+            width: 30%;
+        }
+    }
 
 }

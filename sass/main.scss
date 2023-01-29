@@ -213,7 +213,105 @@ body{
     }
 }
 
-// Main About
+// Main 
+// Projects
+.projects{
+    &__card{
+        position: relative;
+        margin: 1em 0;
+        height: 450px;
+        color: $pure-white;
+        text-align: center;
+        perspective: 1000px;
+
+        &:hover{
+            .projects__card-img{
+                transform: rotateY(-180deg);
+                opacity: 0;
+            }
+            .projects__card-info{
+                transform: rotateY(0);
+                opacity: 1;
+            }
+        }
+        &-img{
+            padding: 2em;
+            height: 100%;
+            border-radius: 8px;
+            background-size: cover;
+            transition: transform 1s, opacity 1s;
+            &--first{
+                background-image: $purple-gradient ,url('../img/rev1-1.png');
+            }
+            &--second{
+                background-image: $purple-gradient ,url('../img/rev2-1.png');
+            }
+            &--third{
+                background-image: $purple-gradient ,url('../img/rev3-1.png');
+            }
+            &-title{
+                font-size: 2.8rem;
+            }
+            &-info{
+                position: absolute;
+                bottom: 30px;
+                right: 30px;
+                font-size: 1.8rem;
+                i{
+                    margin-right: 0.5em;
+                }
+            }
+        }
+        &-info{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: $light-dark;
+            justify-content: center;
+            border-radius: 8px;
+            opacity: 0;
+            transform: rotateY(180deg);
+            transition: transform 1s, opacity 1s;
+
+            &-title{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 1.2em;
+                font-size: 2.8rem;
+            }
+            &-list{
+                margin: 0 auto;
+                width: 70%;
+                font-size: 1.4rem;
+                list-style-type: none;      
+            }
+            &-btn{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 2em;
+                padding: 1em;
+                border-radius: 8px;
+                width: 80%;
+                border: none;
+                background-color: $main-color;
+                cursor: pointer;
+
+                &::before{
+                    background-color: $secondary-color;
+                }
+
+            }
+        }
+    }
+}
+
+// About
 .about{
     &__box{
         width: 100%;
@@ -298,9 +396,11 @@ body{
         
         p{
             
-        font-size: 0.8em;
+        font-size: 1em;
         }
-        
+        .small{
+            font-size: 0.6em;
+        }
         &:hover{
             color: $secondary-color;
             cursor: pointer;
@@ -319,9 +419,62 @@ body{
         }
     }
 }
-.small{
-    font-size: 0.4em;
+// CONTACT
+.contact {
+    position: relative;
+    background-color: $light-dark;
+    overflow: hidden;
+
+    &__form,
+    &__form-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-label {
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+    }
+
+    &__form-input {
+        @include contactForm;
+    }
+    
+
+    &__form-textarea {
+        @include contactForm;
+
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+        min-height: 150px;
+    }
+    textarea:focus, input:focus{
+       
+        outline: 5px solid $secondary-color;
+    }
+    &__form-btn {
+        align-self: flex-end;
+        padding: 1em;
+        width: 100%;
+        max-width: 300px;
+        color: $pure-white;
+        border: none;
+        border-radius: 8px;
+        background-color: $main-color;
+        cursor: pointer;
+
+        &::before {
+            background-color: $secondary-color;
+        }
+        &:hover{
+            color: $secondary-color;
+            cursor: pointer;
+        }
+    }
+
 }
+
 
 
 @import './small';
