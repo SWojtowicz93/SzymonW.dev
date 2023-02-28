@@ -24,4 +24,25 @@
             right: -8em;
         }
     }
+
+    .about{
+        &__box{
+            
+            &__in{
+                width: 100%;
+                &--title{
+                    font-size: 1.8em;
+                }
+                &--text{
+                    h2{
+                        font-size: 1.4em;
+                    }
+                    p{
+                        
+                    font-size: 0.6em;
+                    }
+                }
+            }
+        }
+    }
 }

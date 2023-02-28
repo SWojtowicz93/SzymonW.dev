@@ -17,8 +17,8 @@ html{
 body{
     // font-family: ;
     font-size: 1.6rem;
-    background-color: $dark;
-    color: #fff;
+    background-color: $pure-white;
+    color: #090606;
 }
 
 //Header
@@ -74,18 +74,18 @@ body{
         // font-weight: normal;
         margin-bottom: 0.3em;
         font-size: 3.6rem;
-        color: $pure-white;
+        color: $dark;
     }
 
     &__text{
         font-size: 1.2rem;
-        color: $pure-white;
+        color: $dark;
         margin-bottom: 1em;
     }
     &__second-text{
         text-align: left;
         font-size: 1.2rem;
-        color: $pure-white;
+        color: $dark;
     }
     &__box_slides{
         // background-color: #fff;
@@ -220,7 +220,7 @@ body{
         position: relative;
         margin: 1em 0;
         height: 450px;
-        color: $pure-white;
+        color: $dark;
         text-align: center;
         perspective: 1000px;
 
@@ -316,6 +316,7 @@ body{
     &__box{
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         margin: 2em 0;
         justify-content: center;
         
@@ -326,7 +327,7 @@ body{
             border: 1px solid $border-secondary;
             border-radius: 20px;
             box-shadow: 3px 3px 10px rgba($color: $secondary-color, $alpha: 0.8);
-            width: 33%;
+            width: 100%;
             background-color: $light-dark;
             display: flex;
             flex-direction: column;
@@ -368,55 +369,469 @@ body{
                 background-size: 600%;
                 animation: colors 6s infinite;
                 overflow: hidden;
+                opacity: 0;
+	            animation: show-text 1s 1.5s forwards;
                 &--photo{
+                    opacity: 0;
                     width: 100%;
+	                animation: show-text 1s 1.5s forwards;
                 }
             }
         }
     }
 }
-.more-about{
+// :root{
+//     --green-color: #1ca237;
+//     --red-color: #ba1319;
+//     --blue-color:#100cdf;
+//     --yellow-color:#dfdc0c;
+// }
+
+// [data-bg="abouta"]
+// {
+//     background-color: var(--green-color);
+// }
+// [data-bg="frontend"]
+// {
+//     background-color: var(--red-color);
+// }
+// [data-bg="backend"]
+// {
+//     background-color: var(--blue-color);
+// }
+// [data-bg="career"]
+// {
+//     background-color: var(--yellow-color);
+// }
+
+
+// .aboutn {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	height: 100vh;
+// 	font-family: 'Montserrat', sans-serif;
+// }
+
+// .wrappera {
+// 	display: flex;
+// 	padding: 0.5em;
+// 	width: 1200px;
+// 	background-color: #fff;
+// 	border-radius: 10px;
+// 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+// }
+
+// .hcard {
+// 	position: relative;
+// 	flex-grow: 0.8;
+// 	height: 600px;
+// 	margin: 4px;
+// 	border-radius: 10px;
+// 	background-size: cover;
+// 	background-position: center;
+// 	transition: flex-grow 0.8s;
+// 	overflow: hidden;
+// 	cursor: pointer;
+// }
+
+// .hcard::after {
+// 	content: '';
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// 	background-color: rgba(0, 0, 0, 0.4);
+// 	transition: opacity 0.5s;
+// }
+
+// .abouta {
+// 	background-image: url('https://cdn.pixabay.com/photo/2016/04/12/10/55/blossom-1324088_960_720.jpg');
+// }
+
+// .frontend {
+// 	background-image: url('https://cdn.pixabay.com/photo/2013/10/07/18/06/field-192179_960_720.jpg');
+// }
+
+// .backend {
+// 	background-image: url('https://cdn.pixabay.com/photo/2019/03/31/21/43/the-dark-hedges-4094148_960_720.jpg');
+// }
+
+// .career {
+// 	background-image: url('https://cdn.pixabay.com/photo/2018/05/04/07/55/snow-3373432_960_720.jpg');
+// }
+
+// .abouta::before,
+// .frontend::before,
+// .backend::before,
+// .career::before {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	opacity: 0.5;
+// 	content: '';
+// }
+
+// .abouta::before {
+// 	background-color: $green-color;
+// }
+
+// .frontend::before {
+// 	background-color: $red-color;
+// }
+
+// .backend::before {
+// 	background-color: $blue-color;
+// }
+
+// .career::before {
+// 	background-color: $yellow-color;
+// }
+
+// .text {
+// 	position: absolute;
+// 	left: 50%;
+// 	bottom: 10%;
+// 	transform: translateX(-50%);
+// 	width: 80%;
+// 	padding: 2em;
+// 	color: #fff;
+// 	border-radius: 6px;
+// 	z-index: 5;
+// }
+
+// .text h2 {
+// 	text-transform: uppercase;
+// 	transform: rotate(-90deg);
+// }
+
+// .text p {
+// 	display: none;
+// 	opacity: 0;
+// 	font-size: 1.6rem;
+// }
+
+// .activea {
+// 	flex-grow: 8;
+// }
+
+// .activea .text {
+// 	animation: show-bg 1s 0.6s forwards;
+// }
+
+// .activea .text h2 {
+// 	display: none;
+// }
+
+// .activea .text p {
+// 	display: block;
+// 	animation: show-text 1s 0.2s forwards;
+// }
+
+// .hcard.activea::after {
+// 	opacity: 0;
+// }
+
+// @keyframes show-bg {
+// 	to {
+// 		background-color: rgba(0, 0, 0, 0.4);
+// 	}
+// }
+
+// @keyframes show-text {
+// 	to {
+// 		opacity: 1;
+// 	}
+// }
+
+
+[data-bg="abouta"]
+{
+    background-color: $green-color;
+}
+[data-bg="frontend"]
+{
+    background-color: $red-color;
+}
+[data-bg="backend"]
+{
+    background-color: $blue-color;
+}
+[data-bg="career"]
+{
+    background-color: $yellow-color;
+}
+
+
+.aboutn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
     width: 100%;
-    padding: 1em;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.wrappera {
+	display: flex;
+    flex-direction: column;
+	padding: 0.5em;
+	width: 1200px;
+    height: 90vh;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hcard {
+	position: relative;
+	flex-grow: 0.8;
+	margin: 4px;
+	height: 80%;
+    width: 100%;
+	border-radius: 10px;
+	background-size: cover;
+	background-position: center;
+	transition: flex-shrink 0.6s;
+	overflow: hidden;
+    flex-shrink: 5;
+	cursor: pointer;
+}
+
+.hcard::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	transition: opacity 0.5s;
+}
+
+.abouta {
+	background-image: url('https://cdn.pixabay.com/photo/2016/04/12/10/55/blossom-1324088_960_720.jpg');
+}
+
+.frontend {
+	background-image: url('https://cdn.pixabay.com/photo/2013/10/07/18/06/field-192179_960_720.jpg');
+}
+
+.backend {
+	background-image: url('https://cdn.pixabay.com/photo/2019/03/31/21/43/the-dark-hedges-4094148_960_720.jpg');
+}
+
+.career {
+	background-image: url('https://cdn.pixabay.com/photo/2018/05/04/07/55/snow-3373432_960_720.jpg');
+}
+
+.abouta::before,
+.frontend::before,
+.backend::before,
+.career::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	content: '';
+}
+
+.abouta::before {
+	background-color: $green-color;
+}
+
+.frontend::before {
+	background-color: $red-color;
+}
+
+.backend::before {
+	background-color: $blue-color;
+}
+
+.career::before {
+	background-color: $yellow-color;
+}
+
+.text {
+	position: absolute;
+	left: 50%;
+	bottom: 5%;
+	transform: translateX(-50%);
+	width: 80%;
+	padding: 1em;
+	color: #fff;
+	border-radius: 6px;
+	z-index: 5;
+
+}
+.twoo{
+    bottom: 20%;
+}
+.tree{
+    bottom: 35%;
+}
+
+.text h2 {
+	text-transform: uppercase;
+	transform: rotate(0deg);
+}
+
+.text p {
+	display: none;
+	opacity: 0;
+	font-size: 1.6rem;
+}
+
+.activea {
+    flex-shrink: 1;
+}
+
+.activea .text {
+	animation: show-bg 1s 1.5s forwards;
+}
+.activea .twoo {
+	animation: show-bg 1s 1s forwards;
+    padding: 10px;
+}
+.activea .tree {
+	animation: show-bg 1s 0.6s forwards;
+}
+
+.activea .text h2 {
+	display: none;
+}
+
+.activea .text p {
+	display: block;
+	animation: show-text 1s 1.5s forwards;
+}
+.activea .twoo p {
+	display: block;
+	animation: show-text 1s 0.8s forwards;
+}
+
+.activea .tree p {
+	display: block;
+	animation: show-text 1s 0.2s forwards;
+}
+.hcard.activea::after {
+	opacity: 0;
+}
+
+
+
+.textd {
+	width: 80%;
+	padding: 1em;
+	color: #fff;
+	border-radius: 15px;
+	z-index: 5;
+    text-align: center;
+
+}
+
+.textd p {
+	display: none;
+	opacity: 0;
+	font-size: 1.6rem;
+}
+
+.activea .textd {
+	animation: show-bg 1s 0.8s forwards;
+}
+
+
+.activea .textd p {
+	display: block;
+	animation: show-text 1s 0.8s forwards;
+}
+
+
+
+
+
+@keyframes show-bg {
+	to {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+}
+
+@keyframes show-text {
+	to {
+		opacity: 1;
+	}
+}
+.skill-big-cointainer{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.cointainer-skill {
+    &--left{
+        display: flex;
+        height: 80%;
+        width: 50%;
+    }
+    &--right{
+        height: 100%;
+        width: 50%;
+    }
+}
+.cointainer-skill-small
+{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    &--button{
-        position: relative;
-        padding: 5px;
-        width: 60%;
-        text-align: center;
-        background-color: $border-secondary;
-        border-radius: 20px;
-        box-shadow: 3px 3px 10px rgba($color: $dark, $alpha: 0.8);
-        transition: color .3s;
-        
-        p{
-            
-        font-size: 1em;
-        }
-        .small{
-            font-size: 0.6em;
-        }
-        &:hover{
-            color: $secondary-color;
-            cursor: pointer;
-        }
-        &::before{
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: '';
-            width: 100%;
-            height: 100%;
-            border: 2px solid $secondary-color;
-            border-radius: 20px;
-            opacity: 0;
-            animation: pulse2 4s infinite;
-        }
+    justify-content: space-around;
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    &--left{
+        align-items: flex-start;
+    }
+    
+    &--right{
+        align-items: flex-end;
+    }
+    &--second{
+        padding-top: 1.5em;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        height: 80%;
+        width: 100%;
+    }
+}
+.career-big-cointainer{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+.career-big-cointainer .textd{
+    margin: 0.3em;
+}
+.cointainer-career {
+    &--left{
+        display: flex;
+        height: 80%;
+        width: 70%;
+    }
+    &--right{
+        display: flex;
+        height: 80%;
+        width: 30%;
+    }
+}
+
+.link{
+    text-decoration: none;
+    transition: color .3s;
+    color: #fff;
+
+    &:hover{
+        color: $secondary-color;
     }
 }
 // CONTACT

@@ -30,7 +30,7 @@ const handleNavItemsAnimation = () => {
     })
 }
 
-navBtn.addEventListener('click', handleNav)
+// navBtn.addEventListener('click', handleNav)
 // const handleObserver = () => {
 //     const currentSection = window.scrollY;
 
@@ -55,3 +55,23 @@ navBtn.addEventListener('click', handleNav)
 // handleCurrentYear();
 // navBtn.addEventListener('click', handleNav);
 // window.addEventListener('scroll', handleObserver)
+
+
+const aboutn = document.querySelector('.aboutn')
+const hcards = document.querySelectorAll('.hcard')
+
+function showCard() {
+	hcards.forEach(hcard => {
+		hcard.classList.remove('activea')
+		this.classList.add('activea')
+	})
+
+	handleBgColor(this)
+}
+
+const handleBgColor = hcard => {
+	const season = hcard.getAttribute('data-season')
+	aboutn.setAttribute('data-bg', season)
+}
+
+hcards.forEach(hcard => hcard.addEventListener('click', showCard))
