@@ -94,4 +94,35 @@
             }
         }
     }
+
+    
+    .text {
+        left: 50%;
+        bottom: 5%;
+        padding: 0.4em;
+    
+    }
+    .text-appear {
+        padding: 0.6em;
+        margin: 0.4em;
+    
+    }
+    .text p {
+        font-size: 1.8rem;
+    }
+    .text-appear p {
+        font-size: 1.8rem;
+    }
+    
+    .holder{
+        
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-work p{
+        font-size: 1.4rem
+    }
 }

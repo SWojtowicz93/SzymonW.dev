@@ -57,8 +57,26 @@ const handleNavItemsAnimation = () => {
 // window.addEventListener('scroll', handleObserver)
 
 
-const aboutn = document.querySelector('.aboutn')
+// Change website colors and About Cards
+
+const aboutn = document.querySelector('.about')
 const hcards = document.querySelectorAll('.hcard')
+
+const header = document.querySelector('#heder')
+
+const projects = document.querySelector('#projects')
+const contact = document.querySelector('#contact')
+const nameInputContact = document.querySelector('#name')
+const emailInputContact = document.querySelector('#email')
+const msgInputContact = document.querySelector('#msg')
+const btnContact = document.querySelector('#contact-btn')
+const slides = document.querySelector('#slides')
+const slidesTwoo = document.querySelector('#slides-twoo')
+const projectsShadow = document.querySelectorAll('.projects__card-shadow')
+
+let projectsTitleF = document.querySelectorAll('.projects__card-img-title')
+let projectsTitleFa = document.querySelectorAll('.projects__card-info-title');
+
 
 function showCard() {
 	hcards.forEach(hcard => {
@@ -72,6 +90,62 @@ function showCard() {
 const handleBgColor = hcard => {
 	const season = hcard.getAttribute('data-season')
 	aboutn.setAttribute('data-bg', season)
+	header.setAttribute('data-gradient-bg', season)
+	projects.setAttribute('data-gradient-bg-top', season)
+	contact.setAttribute('data-gradient-bg', season)
+	nameInputContact.setAttribute('data-contact', season)
+	emailInputContact.setAttribute('data-contact', season)
+	msgInputContact.setAttribute('data-contact', season)
+	btnContact.setAttribute('data-contact-btn', season)
+	slides.setAttribute('data-slides', season)
+	slidesTwoo.setAttribute('data-slides', season)
+
+    for (let i=0; i < projectsShadow.length; i++) {
+        projectsShadow[i].setAttribute('data-project', season);
+    }
+    for (let i=0; i < projectsTitleF.length; i++) {
+        projectsTitleF[i].setAttribute('data-title', season);
+    }
+    for (let i=0; i < projectsTitleFa.length; i++) {
+        projectsTitleFa[i].setAttribute('data-title', season);
+    }
+    
 }
 
 hcards.forEach(hcard => hcard.addEventListener('click', showCard))
+
+//Slider
+
+const sliderBox = document.querySelector('.header__slide-imgs')
+const sliderBoxTwoo = document.querySelector('.header__slide-imgs-twoo')
+const carouselImages = document.querySelectorAll('.img-slide')
+const carouselWidth = 100
+const carouselSpeed = 8000
+
+let index = 0
+
+const handleCarousel = () => {
+	index++
+	changeImage()
+}
+
+let startCarousel = setInterval(handleCarousel, carouselSpeed)
+
+const changeImage = () => {
+	if (index > carouselImages.length/2 - 1) {
+		index = 0
+	} else if (index < 0) {
+		index = carouselImages.length/2 - 1
+	}
+
+	sliderBox.style.transform = `translateX(${-index * carouselWidth}%)`
+	sliderBoxTwoo.style.transform = `translateX(${-index * carouselWidth}%)`
+}
+
+
+const resetInterval = () => {
+    changeImage()
+    clearInterval(startCarousel)
+	startCarousel = setInterval(handleCarousel, carouselSpeed)
+}
+

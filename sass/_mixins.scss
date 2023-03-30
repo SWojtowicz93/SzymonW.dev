@@ -17,9 +17,10 @@
 @mixin contactForm {
     margin-bottom: 2em;
     padding: 0.6em 1.2em;
-    background-color: $main-color;
+    // background-color: $main-color;
     
-    border: 2px solid rgb(186, 3, 3);
+    // border: 6px solid rgb(186, 3, 3);
+    // box-shadow: 1px 1px 8px 1px rgba(220, 231, 20, 0.75) inset;
     border: none;
     border-radius: 8px;
     font-size: 1.6rem;

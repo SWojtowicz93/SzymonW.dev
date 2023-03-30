@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="css/hanmurger.css">
     <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Courgette&family=Kalam:wght@400;700&family=Merienda:wght@400;700;800&display=swap" rel="stylesheet">
     <title>Szymon.dev</title>
 </head>
 <body>
-        <header class="header section">
+        <header class="header section" id="heder" data-gradient-bg="abouta">
             <button class="hamburger hamburger--elastic" type="button">
                 <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
@@ -45,29 +48,22 @@
                 </div>
             </div>
             <div class="header__box_slides">
-                    <div class="header__slide-img">
+                    <div class="header__slide-img"  id="slides" data-slides="abouta">
                         <div class="header__slide-imgs">
-                            <img src="img/rev1-1.png" alt="">
-                        </div>
-                        <div class="header__slide-imgs">
-                            <img src="img/rev2-1.png" alt="">
-                        </div>
-                        <div class="header__slide-imgs">
-                            <img src="img/rev3-1.png" alt="">
-                        </div>
-                        <div class="header__slide-imgs">
-                            <!-- <img src="img/rev4-1.png" alt=""> -->
+                            <img class="img-slide" src="img/rev1-1.png" alt="">
+                            
+                            <img  class="img-slide" src="img/rev2-1.png" alt="">
+                            <img class="img-slide" src="img/rev3-1.png" alt="">
+                            <img class="img-slide" src="img/rev2-1.png" alt="">
                         </div>
                     </div>
-                    <div class="header__slide-img-twoo">
-                        
-                        <div class="header__slide-imgs">
-                        </div>
-                        <div class="header__slide-imgs">
-                        </div>
-                        <div class="header__slide-imgs">
-                        </div>
-                        <div class="header__slide-imgs">
+                    <div class="header__slide-img header__slide-img-twoo" id="slides-twoo" data-slides="abouta">
+                        <div class="header__slide-imgs header__slide-imgs-twoo">
+                            <img class="img-slide" src="img/rev1-2.png" alt="">
+                            
+                            <img  class="img-slide" src="img/rev2-2.png" alt="">
+                            <img class="img-slide" src="img/rev3-2.png" alt="">
+                            <img class="img-slide" src="img/rev2-2.png" alt="">
                         </div>
                     </div>
 
@@ -82,13 +78,15 @@
                     <h2 class="section-heading">My Projects</h2>
                     <div class="projects__cards">
                         <div class="projects__card" onclick="void(0)">
-                            <div class="projects__card-img projects__card-img--first">
-                                <h3 class="projects__card-img-title">Project 1</h3>
+                            <div class="projects__card-img projects__card-img--first" >
+                                <div class="projects__card-shadow" data-project="abouta"></div>
+                                <h3 class="projects__card-img-title" data-title="abouta">Project 1</h3>
                                 <p class="projects__card-img-info"><i class="fa-solid fa-arrow-right-long"></i>More information</p>
+                                
                             </div>
 
                             <div class="projects__card-info">
-                                <h3 class="projects__card-info-title">Project 1</h3>
+                                <h3 class="projects__card-info-title" data-title="abouta">Project 1</h3>
                                 <ul class="projects__card-info-list">
                                     <li class="projects__card-info-list-item">Good vibe</li>
                                     <li class="projects__card-info-list-item">Pierożki</li>
@@ -103,12 +101,13 @@
                         </div>
                         <div class="projects__card" onclick="void(0)">
                             <div class="projects__card-img projects__card-img--second">
-                                <h3 class="projects__card-img-title">Project 2</h3>
+                                <div class="projects__card-shadow" data-project="abouta"></div>
+                                <h3 class="projects__card-img-title"  data-title="abouta">Project 2</h3>
                                 <p class="projects__card-img-info"><i class="fas fa.angle.double-right"></i>More information</p>
                             </div>
 
                             <div class="projects__card-info">
-                                <h3 class="projects__card-info-title">Project 2</h3>
+                                <h3 class="projects__card-info-title"  id="projects-title-sa" data-title="abouta">Project 2</h3>
                                 <ul class="projects__card-info-list">
                                     <li class="projects__card-info-list-item">Good vibe</li>
                                     <li class="projects__card-info-list-item">Pierożki</li>
@@ -123,12 +122,13 @@
                         </div>
                         <div class="projects__card" onclick="void(0)">
                             <div class="projects__card-img projects__card-img--third">
-                                <h3 class="projects__card-img-title">Project 3</h3>
+                                <div class="projects__card-shadow" data-project="abouta"></div>
+                                <h3 class="projects__card-img-title" data-title="abouta">Project 3</h3>
                                 <p class="projects__card-img-info"><i class="fas fa.angle.double-right"></i>More information</p>
                             </div>
 
                             <div class="projects__card-info">
-                                <h3 class="projects__card-info-title">Project 3</h3>
+                                <h3 class="projects__card-info-title" data-title="abouta">Project 3</h3>
                                 <ul class="projects__card-info-list">
                                     <li class="projects__card-info-list-item">Good vibe</li>
                                     <li class="projects__card-info-list-item">Pierożki</li>
@@ -143,21 +143,18 @@
                         </div>
                     </div>
                 </div>
-
-            </section>
-
-            <section class="projects-during-work section-padding section">
                 <div class="wrapper">
                     <h2 class="section-heading">Work in progress</h2>
                     <div class="projects__cards">
                         <div class="projects__card" onclick="void(0)">
                             <div class="projects__card-img projects__card-img--first">
-                                <h3 class="projects__card-img-title">Project 1</h3>
+                                <div class="projects__card-shadow" data-project="abouta"></div>
+                                <h3 class="projects__card-img-title" data-title="abouta">Project 1</h3>
                                 <p class="projects__card-img-info"><i class="fa-solid fa-arrow-right-long"></i>More information</p>
                             </div>
 
                             <div class="projects__card-info">
-                                <h3 class="projects__card-info-title">Project 1</h3>
+                                <h3 class="projects__card-info-title" data-title="abouta">Project 1</h3>
                                 <ul class="projects__card-info-list">
                                     <li class="projects__card-info-list-item">Good vibe</li>
                                     <li class="projects__card-info-list-item">Pierożki</li>
@@ -172,12 +169,13 @@
                         </div>
                         <div class="projects__card" onclick="void(0)">
                             <div class="projects__card-img projects__card-img--second">
-                                <h3 class="projects__card-img-title">Project 2</h3>
+                                <div class="projects__card-shadow" data-project="abouta"></div>
+                                <h3 class="projects__card-img-title" data-title="abouta">Project 2</h3>
                                 <p class="projects__card-img-info"><i class="fas fa.angle.double-right"></i>More information</p>
                             </div>
 
                             <div class="projects__card-info">
-                                <h3 class="projects__card-info-title">Project 2</h3>
+                                <h3 class="projects__card-info-title" data-title="abouta">Project 2</h3>
                                 <ul class="projects__card-info-list">
                                     <li class="projects__card-info-list-item">Good vibe</li>
                                     <li class="projects__card-info-list-item">Pierożki</li>
@@ -192,12 +190,13 @@
                         </div>
                         <div class="projects__card" onclick="void(0)">
                             <div class="projects__card-img projects__card-img--third">
-                                <h3 class="projects__card-img-title">Project 3</h3>
+                                <div class="projects__card-shadow" data-project="abouta"></div>
+                                <h3 class="projects__card-img-title" data-title="abouta">Project 3</h3>
                                 <p class="projects__card-img-info"><i class="fas fa.angle.double-right"></i>More information</p>
                             </div>
 
                             <div class="projects__card-info">
-                                <h3 class="projects__card-info-title">Project 3</h3>
+                                <h3 class="projects__card-info-title" data-title="abouta">Project 3</h3>
                                 <ul class="projects__card-info-list">
                                     <li class="projects__card-info-list-item">Good vibe</li>
                                     <li class="projects__card-info-list-item">Pierożki</li>
@@ -214,176 +213,9 @@
                 </div>
 
             </section>
-            <section class="about section white-section" id="about">
-                <!--<div class="wrapper"> -->
-                    <h2 class="section-heading">Somethink about me</h2>
-                        <!-- <div class="about__box">
-                            <div class="about__box__in about__box__in--left">
-                                <div class="about__box__in--title">
-                                    <h2>Skills</h2>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <h3>HTML</h3>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <h3>JavaScript</h3>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <h3>CSS</h3>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <h3>SCSS</h3>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <h3>Git</h3>
-                                </div>
-                            </div>
-                            <div class="about__box__in about__box__in--middle">
-                                <div class="about__box__in--title">
-                                    <h3>This is me</h3>
-                                </div>
-                                <div class="about__box__in--background">
-                                    <img src="img/ja20.png" class="about__box__in--background--photo" alt="" style="filter: grayscale(100%); opacity: 0.8;">
-                                    <div class="shadow"></div>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <p>Hi my name is Szymon. Nice to see you on my page. You can call me Simon</p>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eveniet, repellat, quibusdam ad harum suscipit maiores cupiditate quis sunt beatae quam? Repellat dolore quos sequi sint, voluptatem reiciendis consequatur! Sint?</p>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut doloremque reprehenderit saepe repellendus corporis libero velit, iste nihil ratione est illum autem perferendis iure consequatur asperiores enim nulla omnis aut?
-                                    Nobis repellat, consequatur voluptatum nesciunt eligendi odio tempora provident molestias, consequuntur enim eos aut non dolorum, iste veritatis porro fugiat! Nisi dignissimos voluptate doloribus repellat facilis fuga quasi odio natus.</p>
-                                </div>
-                            </div>
-                            <div class="about__box__in about__box__in--right">
-                                <div class="about__box__in--title">
-                                    <h2>Skills</h2>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <h3>PHP</h3>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <h3>MySQL</h3>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <h3>PostgreSQL</h3>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <h3>RWD</h3>
-                                </div>
-                                <div class="about__box__in--text">
-                                    <h3>jQuery</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="more-about">
-                            <div class="more-about--button">
-                                <p>Click here if you wanna see more about me</p>
-                                <p class="small">Things like career history/hobbies/my family/etc.</p>
-                            </div>
-                            <div class="more-about__box">
-                                <div class="about__box">
-                                    <div class="about__box__in about__box__in--left">
-                                        <div class="about__box__in--title">
-                                            <h2>Career history</h2>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>HTML</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>JavaScript</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>CSS</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>SCSS</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>Git</h3>
-                                        </div>
-                                    </div>
-                                    <div class="about__box__in about__box__in--middle">
-                                        <div class="about__box__in--title">
-                                            <h3>My family and me</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <p>Hi my name is Szymon. Nice to see you on my page. You can call me Simon</p>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eveniet, repellat, quibusdam ad harum suscipit maiores cupiditate quis sunt beatae quam? Repellat dolore quos sequi sint, voluptatem reiciendis consequatur! Sint?</p>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut doloremque reprehenderit saepe repellendus corporis libero velit, iste nihil ratione est illum autem perferendis iure consequatur asperiores enim nulla omnis aut?
-                                            Nobis repellat, consequatur voluptatum nesciunt eligendi odio tempora provident molestias, consequuntur enim eos aut non dolorum, iste veritatis porro fugiat! Nisi dignissimos voluptate doloribus repellat facilis fuga quasi odio natus.</p>
-                                        </div>
-                                    </div>
-                                    <div class="about__box__in about__box__in--right">
-                                        <div class="about__box__in--title">
-                                            <h2>My hobby</h2>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>PHP</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>MySQL</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>PostgreSQL</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>RWD</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>jQuery</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="about__box">
-                                    <div class="about__box__in about__box__in--middle">
-                                        <div class="about__box__in--title">
-                                            <h3>My Dogs</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <p>Hi my name is Szymon. Nice to see you on my page. You can call me Simon</p>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eveniet, repellat, quibusdam ad harum suscipit maiores cupiditate quis sunt beatae quam? Repellat dolore quos sequi sint, voluptatem reiciendis consequatur! Sint?</p>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut doloremque reprehenderit saepe repellendus corporis libero velit, iste nihil ratione est illum autem perferendis iure consequatur asperiores enim nulla omnis aut?
-                                            Nobis repellat, consequatur voluptatum nesciunt eligendi odio tempora provident molestias, consequuntur enim eos aut non dolorum, iste veritatis porro fugiat! Nisi dignissimos voluptate doloribus repellat facilis fuga quasi odio natus.</p>
-                                        </div>
-                                    </div>
-                                    <div class="about__box__in about__box__in--right">
-                                        <div class="about__box__in--title">
-                                            <h2>My faw music</h2>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>PHP</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>MySQL</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>PostgreSQL</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>RWD</h3>
-                                        </div>
-                                        <div class="about__box__in--text">
-                                            <h3>jQuery</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="aboutn" data-bg="abouta">
-
+            <section class="about section white-section" id="about" data-bg="abouta">
+                <h2 class="section-heading">Somethink about me</h2>
+                <div class="aboutme" >
                     <div class="wrappera">
                         <div class="hcard abouta activea" data-season="abouta">
                             <div class="skill-big-cointainer">
@@ -392,10 +224,10 @@
                                     <img src="img/ja20.png" class="about__box__in--background--photo" alt="" style="filter: grayscale(100%); opacity: 0.8;">
                                     <div class="shadow"></div>
                                 </div>
-                                    <div class="textd">
+                                    <div class="text-appear">
                                         <p>Hi my name is Szymon. <br/><br/>Nice to see you on my page. You can call me Simon.</p>
                                     </div>
-                                    <div class="textd">
+                                    <div class="text-appear">
                                         <p>I am a programmer and I love what I do.
                                             <br/>I try to constantly develop my skills in the front-end as well as the back-end and other areas.
                                             <br/>I live in Norway but I come from Poland.
@@ -414,35 +246,37 @@
                             <div class="skill-big-cointainer">
                                 <div class="cointainer-skill--left">
                                     <div class="cointainer-skill-small cointainer-skill-small--right">
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>HTML</p>
                                         </div>
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>CSS</p>
                                         </div>
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>SCSS</p>
                                         </div>
                                     </div>
                                     <div class="cointainer-skill-small cointainer-skill-small--left">
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>JavaScript</p>
                                         </div>
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>jQuery</p>
                                         </div>
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>RWD</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="cointainer-skill--right">
                                     <div class="cointainer-skill-small--second">
-                                        <div class="textd">
-                                            <p>SCSS</p>
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa laudantium minima adipisci asperiores aspernatur ipsa perspiciatis iste, reprehenderit a expedita commodi nesciunt recusandae quo fuga? Nostrum id quia qui officiis.
-                                                Aut officia beatae sed expedita, reprehenderit, vero voluptatem alias quo tempora distinctio at saepe. Voluptates, vero. Earum harum eveniet fuga ea aut, eaque nam excepturi sit et eos. Incidunt, doloremque.
-                                            </p>
+                                        <div class="holder">
+                                            <div class="text-appear">
+                                                <p>Front-end</p>
+                                                <p>I learned the basics of front-end by doing small projects and working as a freelancer. Now I try to develop my skills by doing bigger and bigger projects.
+                                                    I try improve my skills every day.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -450,42 +284,45 @@
                             
                             <div class="text">
                                 <h2>front-end</h2>
-                                <p>Click here to check my project.</p>
+                                <a class="link" href="#projects"><p>Click here to check my project.</p></a>
                             </div>
                         </div>
                         <div class="hcard backend" data-season="backend">
                             <div class="skill-big-cointainer">
                                 <div class="cointainer-skill--left">
                                     <div class="cointainer-skill-small cointainer-skill-small--right">
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>PHP</p>
                                         </div>
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>MySQL</p>
                                         </div>
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>PostgreSQL</p>
                                         </div>
                                     </div>
                                     <div class="cointainer-skill-small cointainer-skill-small--left">
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>SEO</p>
                                         </div>
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>Git</p>
                                         </div>
-                                        <div class="textd">
+                                        <div class="text-appear">
                                             <p>Photoshop</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="cointainer-skill--right">
                                     <div class="cointainer-skill-small--second">
-                                        <div class="textd">
-                                            <p>SCSS</p>
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa laudantium minima adipisci asperiores aspernatur ipsa perspiciatis iste, reprehenderit a expedita commodi nesciunt recusandae quo fuga? Nostrum id quia qui officiis.
-                                                Aut officia beatae sed expedita, reprehenderit, vero voluptatem alias quo tempora distinctio at saepe. Voluptates, vero. Earum harum eveniet fuga ea aut, eaque nam excepturi sit et eos. Incidunt, doloremque.
-                                            </p>
+                                        <div class="holder">
+                                            <div class="text-appear">
+                                                <p>Back-end</p>
+                                                <p>I learnt a great deal about the back end while working as a programmer at Sysconfig.
+                                                    Working for this company allowed me to expand my knowledge.
+                                                    Now I am preparing my own projects to learn as much as possible.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -493,14 +330,14 @@
 
                             <div class="text">
                                 <h2>back-end & other</h2>
-                                <p>Click here to check my project.</p>
+                                <a class="link" href="#projects"><p>Click here to check my project.</p></a>
                             </div>
                         </div>
                         <div class="hcard career" data-season="career">
                             <div class="career-big-cointainer">
                                 <div class="cointainer-career--left">
-                                        <div class="textd">
-                                            <p>01.2019 - 12.2019 - Voivodeship Labour Office in Kielce</p>
+                                        <div class="text-appear text-work">
+                                            <p>01.2019 - 12.2019 - Voivodeship Labour Office in Kielce<a class="link" href="https://wupkielce.praca.gov.pl/" target="_blank"> (Link)</a></p>
                                             <br/>
                                             <p>IT support.
                                                 Maintenance and repair of computer equipment.
@@ -508,67 +345,37 @@
                                                 Installation and updating of systems, installation of consumables for office equipment.
                                                 Data archiving.</p>
                                         </div>
-                                        <div class="textd">
-                                            <p>01.02.2020 - currently - Sysconfig (Link)</p>
+                                        <div class="text-appear text-work">
+                                            <p>01.02.2020 - currently - Sysconfig  <a class="link" href="https://www.sysconfig.cloud/" target="_blank">(Link)</a></p>
                                             <br/>
                                             <p>Programmer (PHP, LUA, Javascript, postgrSQL, HTML and CSS).
                                                 Design and programming of web sites.
                                                 Development of operating systems, database management systems, drivers.
-                                                Finding and fixing bugs that arise while writing code and testing them.
-                                                Assistance in programming service in the field of web technologies.
+                                                Finding and fixing bugs that arise while writing code and testing them.<span class="show">
+                                                 And Much more Check in CV</span><span class="hide">
+                                                Assistance in programming service in the field of web technologies. 
                                                 Configuration, development and support of VoIP software (including FreeSWITCH and Kamalio).
                                                 Remote configuration of servers and other network equipment (including routers, firewalls and switches) related to the provision of VoIP services.
-                                                Maintenance of servers and other network equipment.     </p>
+                                                Maintenance of servers and other network equipment. </span>    </p>
                                         </div>
                                 </div>
                                 <div class="cointainer-career--right">
-                                    <div class="textd">
+                                    <div class="text-appear">
                                         <p>Here is the place for a great new story.</p>
                                     </div>
                                 </div>
                                 <div class="text">
                                     <h2>career</h2>
-                                    <p>Click here to check and download my CV.</p>
+                                    <a class="link" href="https://swojtowicz93.github.io/CV/index.html" target="_blank"><p>Click here to check and download my CV.</p></a>
                                 </div>
                             </div>
                         </div>
                 
                     </div>
                 </div>
-                <!-- <div class="aboutn" data-bg="abouta">
-
-                    <div class="wrappera">
-                        <div class="hcard abouta activea" data-season="abouta">
-                            <div class="text">
-                                <h2>about</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="hcard frontend" data-season="frontend">
-                            <div class="text">
-                                <h2>front-end</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="hcard backend" data-season="backend">
-                            <div class="text">
-                                <h2>back-end</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="hcard career" data-season="career">
-                            <div class="text">
-                                <h2>career</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                            </div>
-                        </div>
-                
-                    </div>
-                </div> -->
-
             </section>
             
-            <section id="contact" class="contact section-padding section white-section">
+            <section id="contact" class="contact section-padding section white-section" data-gradient-bg="abouta">
 
                 <div class="white-block white-block-left"></div>
                 <div class="white-block white-block-right"></div>
@@ -581,16 +388,16 @@
     
                         <div class="contact__form-top">
                             <label for="name" class="contact__form-label">Name:</label>
-                            <input type="text" class="contact__form-input" id="name">
+                            <input type="text" class="contact__form-input" id="name" data-contact="abouta">
     
                             <label for="email" class="contact__form-label">Address e-mail:</label>
-                            <input type="text" id="email" class="contact__form-input">
+                            <input type="text" id="email" class="contact__form-input" data-contact="abouta">
                         </div>
     
                         <label for="msg" class="contact__form-label">Message:</label>
-                        <textarea id="msg" class="contact__form-textarea"></textarea>
+                        <textarea id="msg" class="contact__form-textarea" data-contact="abouta"></textarea>
     
-                        <button type="submit" class="contact__form-btn btn-special-animation">Send</button>
+                        <button type="submit" class="contact__form-btn btn-special-animation" id="contact-btn" data-contact-btn="abouta">Send</button>
     
                     </form>
                 </div>
