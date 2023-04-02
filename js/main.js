@@ -76,6 +76,7 @@ const projectsShadow = document.querySelectorAll('.projects__card-shadow')
 
 let projectsTitleF = document.querySelectorAll('.projects__card-img-title')
 let projectsTitleFa = document.querySelectorAll('.projects__card-info-title');
+let headerBTN = document.querySelectorAll('.header__box-text__buttons__btn');
 
 
 function showCard() {
@@ -108,6 +109,10 @@ const handleBgColor = hcard => {
     }
     for (let i=0; i < projectsTitleFa.length; i++) {
         projectsTitleFa[i].setAttribute('data-title', season);
+    }
+	for (let i=0; i < headerBTN.length; i++) {
+        headerBTN[i].setAttribute('data-slides', season);
+		headerBTN[i].setAttribute('data-contact-btn', season);
     }
     
 }

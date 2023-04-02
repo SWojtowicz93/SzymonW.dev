@@ -23,6 +23,20 @@
             top: -8em;
             right: -8em;
         }
+
+
+        &__box-text{
+            &__buttons{
+                margin-top: 5em;
+
+                &__btn {
+                    margin: 2em;
+                    padding: 1em 1.8em;
+                    font-size: 1.8rem;
+                    letter-spacing: .2rem;
+                }
+            }
+        }
     }
 
     .about{
