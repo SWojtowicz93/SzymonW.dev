@@ -72,18 +72,19 @@ body{
         overflow: hidden;
 
         &__buttons{
-            margin-top: 5em;
+            margin-top: 3em;
             height: 10%;
+            width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             &__btn {
-                padding: 0.8em 1.6em;
-                display: inline-block;
-                width: 40%;
+                margin-right: .7em;
+                padding: 0.5em 1em;
                 font-family: 'Bangers', cursive;
+                width: 30%;
                 font-size: 1.4rem;
-                letter-spacing: .2rem;
+                letter-spacing: .1rem;
                 background: $green-color;
                 border: none;
                 border-radius: 12px;
@@ -91,7 +92,12 @@ body{
                 text-decoration: none;
                 text-transform: uppercase;
                 cursor: pointer;
-        
+                &:first-child{
+                    margin-left: 2em;
+                }
+                &:last-child{
+                    margin-right: 2em;
+                }
                 &::before {
                     background-color: $light-white;
                 }

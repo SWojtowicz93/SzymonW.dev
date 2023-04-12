@@ -24,6 +24,18 @@
             top: -4em;
             right: -4em;
         }
+        &__box-text{
+            &__buttons{
+                margin-top: 3em;
+
+                &__btn {
+                    margin: 2em;
+                    padding: 1em 1.4em;
+                    font-size: 1.8rem;
+                    letter-spacing: .3rem;
+                }
+            }
+        }
     }
     .section-heading{
         font-size: 3.6rem;

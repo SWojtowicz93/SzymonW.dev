@@ -136,19 +136,20 @@ body {
   overflow: hidden;
 }
 .header__box-text__buttons {
-  margin-top: 5em;
+  margin-top: 3em;
   height: 10%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .header__box-text__buttons__btn {
-  padding: 0.8em 1.6em;
-  display: inline-block;
-  width: 40%;
+  margin-right: 0.7em;
+  padding: 0.5em 1em;
   font-family: "Bangers", cursive;
+  width: 30%;
   font-size: 1.4rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   background: #11da39;
   border: none;
   border-radius: 12px;
@@ -156,6 +157,12 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+}
+.header__box-text__buttons__btn:first-child {
+  margin-left: 2em;
+}
+.header__box-text__buttons__btn:last-child {
+  margin-right: 2em;
 }
 .header__box-text__buttons__btn::before {
   background-color: #eee;
@@ -998,12 +1005,12 @@ body {
     right: -8em;
   }
   .header__box-text__buttons {
-    margin-top: 5em;
+    margin-top: 3em;
   }
   .header__box-text__buttons__btn {
     margin: 2em;
-    padding: 1em 1.8em;
-    font-size: 1.8rem;
+    padding: 0.8em 1.2em;
+    font-size: 1.6rem;
     letter-spacing: 0.2rem;
   }
   .about__box__in {
@@ -1067,6 +1074,15 @@ body {
   .header__bg-icon--two {
     top: -4em;
     right: -4em;
+  }
+  .header__box-text__buttons {
+    margin-top: 3em;
+  }
+  .header__box-text__buttons__btn {
+    margin: 2em;
+    padding: 1em 1.4em;
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
   }
   .section-heading {
     font-size: 3.6rem;
@@ -1150,6 +1166,17 @@ body {
   .header__bg-icon--two {
     top: -6em;
     right: -6em;
+  }
+  .header__box-text__buttons {
+    margin-top: 4em;
+    flex-wrap: wrap;
+  }
+  .header__box-text__buttons__btn {
+    margin: 1em;
+    width: 25%;
+    padding: 1.2em 1.8em;
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
   }
   .nav {
     position: fixed;

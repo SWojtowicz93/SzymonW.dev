@@ -26,6 +26,20 @@
             top: -6em;
             right: -6em;
         }
+        &__box-text{
+            &__buttons{
+                margin-top: 4em;
+                flex-wrap: wrap;
+
+                &__btn {
+                    margin: 1em;
+                    width: 25%;
+                    padding: 1.2em 1.8em;
+                    font-size: 1.8rem;
+                    letter-spacing: .4rem;
+                }
+            }
+        }
     }
     .nav{
         position: fixed;
