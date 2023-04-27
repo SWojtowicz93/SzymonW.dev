@@ -75,7 +75,10 @@ const slidesTwoo = document.querySelector('#slides-twoo')
 const projectsShadow = document.querySelectorAll('.projects__card-shadow')
 
 let projectsTitleF = document.querySelectorAll('.projects__card-img-title')
+let projectsImgInfo = document.querySelectorAll('.projects__card-img-info')
 let projectsTitleFa = document.querySelectorAll('.projects__card-info-title');
+let projectsInfo = document.querySelectorAll('.projects__card-info');
+let projectsLink = document.querySelectorAll('.projects__card-info-list-item');
 let headerBTN = document.querySelectorAll('.header__box-text__buttons__btn');
 
 
@@ -113,6 +116,15 @@ const handleBgColor = hcard => {
 	for (let i=0; i < headerBTN.length; i++) {
         headerBTN[i].setAttribute('data-slides', season);
 		headerBTN[i].setAttribute('data-contact-btn', season);
+    }
+	for (let i=0; i < projectsInfo.length; i++) {
+        projectsInfo[i].setAttribute('data-project-info', season);
+    }
+	for (let i=0; i < projectsLink.length; i++) {
+        projectsLink[i].setAttribute('data-link', season);
+    }
+	for (let i=0; i < projectsImgInfo.length; i++) {
+        projectsImgInfo[i].setAttribute('data-title', season);
     }
     
 }
